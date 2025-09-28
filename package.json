@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "name": "dgraph-auto-exporter",
+  "packageManager": "yarn@4.6.0",
+  "repository": "github:ezyostudio/dgraph-auto-exporter",
+  "scripts": {
+    "dev": "npx --yes listhen -w ./app.ts",
+    "start": "npx --yes listhen ./app.ts",
+    "release": "npx changelogen@latest --release --clean --push"
+  },
+  "dependencies": {
+    "cron": "^4.3.3",
+    "dotenv": "^17.2.2",
+    "h3": "^1.15.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.1"
+  }
+}

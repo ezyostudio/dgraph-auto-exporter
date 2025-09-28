@@ -1,0 +1,31 @@
+# Before using, remember to replace:
+# 1. <random-admin-token> – with the admin api key
+# 2. <random-client-token> – with the client api key
+
+version: '3.2'
+services:
+  zero:
+    image: 'dgraph/dgraph:latest'
+    volumes:
+      - 'dgraph-data:/dgraph' # shared volume between zero and alpha
+    restart: on-failure
+    command: 'dgraph zero --my=zero:5080'
+  alpha:
+    image: 'dgraph/dgraph:latest'
+    volumes:
+      - 'dgraph-data:/dgraph' # shared volume between zero and alpha
+    restart: on-failure
+    command: 'dgraph alpha --my=alpha:7080 --zero=zero:5080 --security "token=<random-admin-token>;whitelist=0.0.0.0/0"'
+  exporter: 
+    build: .
+    image: ghcr.io/ezyostudio/dgraph-auto-exporter:latest
+    restart: on-failure
+    environment:
+      - CRON_SCHEDULE="0 0 * * *"
+      - DGRAPH_URL=http://alpha:8080
+      - DGRAPH_ADMIN_TOKEN=<random-admin-token>
+      - DGRAPH_EXPORT_FORMAT=rdf
+      - AWS_ACCESS_KEY_ID=
+      - AWS_SECRET_ACCESS_KEY=
+      - AWS_DESTINATION=s3://s3.<region>.amazonaws.com/<bucket-name>
+
