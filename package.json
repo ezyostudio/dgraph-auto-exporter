@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "0.0.2",
   "name": "dgraph-auto-exporter",
   "packageManager": "yarn@4.6.0",
   "repository": "github:ezyostudio/dgraph-auto-exporter",
