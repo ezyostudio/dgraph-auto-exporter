@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "cron": "^4.3.3",
-    "dotenv": "^17.2.2",
+    "dotenv": "^17.2.3",
     "h3": "^1.15.4"
   },
   "devDependencies": {
