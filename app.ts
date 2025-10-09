@@ -118,6 +118,7 @@ const job = CronJob.from({
   cronTime: config.cronSchedule,
   onTick: performExport,
   start: true,
+  runOnInit: true,
 });
 
 export const app = createApp();
