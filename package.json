@@ -9,7 +9,7 @@
     "release": "npx changelogen@latest --release --clean --push"
   },
   "dependencies": {
-    "cron": "^4.3.3",
+    "cron": "^4.3.4",
     "dotenv": "^17.2.2",
     "h3": "^1.15.4"
   },
