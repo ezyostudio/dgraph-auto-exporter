@@ -28,13 +28,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cron@npm:^4.3.3":
-  version: 4.3.3
-  resolution: "cron@npm:4.3.3"
+"cron@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "cron@npm:4.4.0"
   dependencies:
     "@types/luxon": "npm:~3.7.0"
     luxon: "npm:~3.7.0"
-  checksum: 10c0/f58976120a069406419d3b690f3e30a2d66c19de87712ce988bed47bbabc9e39c317e1793bdff92a466a57b9174aff7c40912c57f08f3198eb59838f10bf1247
+  checksum: 10c0/e3762fda4a9a2404ac2e54e1104a3c6c695747e14b2321bbc5531aa1192c75a319075695fcaf68b6927e0ffd877b5454f314c680f6586db1a78b2c25b76b8a32
   languageName: node
   linkType: hard
 
@@ -66,7 +66,7 @@ __metadata:
   resolution: "dgraph-auto-exporter@workspace:."
   dependencies:
     "@types/node": "npm:^24.5.1"
-    cron: "npm:^4.3.3"
+    cron: "npm:^4.4.0"
     dotenv: "npm:^17.2.2"
     h3: "npm:^1.15.4"
   languageName: unknown
